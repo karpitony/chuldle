@@ -234,7 +234,7 @@
 	const GRAY_BOX = '⬜';
 
 	function generateSummary() {
-		let summary = `https://chuldle.netlify.app/`;
+		let summary = 'https://chuldle.netlify.app/';
 		if(practiceMode){
 			summary += `\nPractice\nAnswer: ${solution}\n`;
 		}
@@ -246,13 +246,13 @@
 			guess.disassembled.forEach(letterInfo => {
 				switch (letterInfo.matched) {
 					case 1:
-						summary += GREEN_BOX;
+						summary += '🟩';
 						break;
 					case 2:
-						summary += YELLOW_BOX;
+						summary += '🟨';
 						break;
 					default:
-						summary += GRAY_BOX;
+						summary += '⬜';
 				}
 			});
 			summary += '\n'; // New line for each guess
