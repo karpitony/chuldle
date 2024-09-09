@@ -264,11 +264,7 @@
 
 	function shareResult() {
 		const summary = generateSummary();
-		navigator.clipboard.writeText(summary).then(() => {
-			alert('Result copied to clipboard!');
-		}, (err) => {
-			alert('Failed to copy result: ', err);
-		});
+		navigator.clipboard.writeText(summary);
 	}
 
 	function newPractice() {
