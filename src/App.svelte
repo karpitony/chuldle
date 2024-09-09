@@ -240,7 +240,8 @@
 		}
 		else{
 			const gameNumber = seed - 723;
-			summary += `\nChuldle #${gameNumber}\n`;
+			summary += `\nChuldle #${gameNumber}`;
+			summary.join('\n\n');
 		}
 		guesses.forEach(guess => {
 			guess.disassembled.forEach(letterInfo => {
@@ -262,7 +263,7 @@
 
 	function shareResult() {
 		const summary = generateSummary();
-		navigator.clipboard.writeText(decodeURIComponent(summary)).then(() => {
+		navigator.clipboard.writeText(summary).then(() => {
 			alert('Result copied to clipboard!');
 		}, (err) => {
 			alert('Failed to copy result: ', err);
