@@ -262,7 +262,7 @@
 
 	function shareResult() {
 		const summary = generateSummary();
-		navigator.clipboard.writeText(summary).then(() => {
+		navigator.clipboard.writeText(decodeURIComponent(summary)).then(() => {
 			alert('Result copied to clipboard!');
 		}, (err) => {
 			alert('Failed to copy result: ', err);
