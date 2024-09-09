@@ -258,11 +258,13 @@
 			});
 			summary += '\n'; // New line for each guess
 		});
+		console.log(summary);
 		return summary.trim(); // Remove the last new line
 	}
 
 	function shareResult() {
 		const summary = generateSummary();
+		console.log(summary);
 		navigator.clipboard.writeText(summary).then(() => {
 			alert('Result copied to clipboard!');
 		}, (err) => {
