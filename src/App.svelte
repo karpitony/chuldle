@@ -234,7 +234,7 @@
 	const GRAY_BOX = '⬜';
 
 	function generateSummary() {
-		let summary = 'https://chuldle.netlify.app/';
+		let summary = `https://chuldle.netlify.app/`;
 		if(practiceMode){
 			summary += `\nPractice\nAnswer: ${solution}\n`;
 		}
@@ -246,24 +246,24 @@
 			guess.disassembled.forEach(letterInfo => {
 				switch (letterInfo.matched) {
 					case 1:
-						summary += '🟩';
+						summary += GREEN_BOX;
 						break;
 					case 2:
-						summary += '🟨';
+						summary += YELLOW_BOX;
 						break;
 					default:
-						summary += '⬜';
+						summary += GRAY_BOX;
 				}
 			});
 			summary += '\n'; // New line for each guess
 		});
-		console.log(summary);
+
+		console.log(summary)
 		return summary.trim(); // Remove the last new line
 	}
 
 	function shareResult() {
 		const summary = generateSummary();
-		console.log(summary);
 		navigator.clipboard.writeText(summary).then(() => {
 			alert('Result copied to clipboard!');
 		}, (err) => {
