@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>{title}</title>
+  <title>Chuldle</title>
 </svelte:head>
 
 <style global lang="postcss">
