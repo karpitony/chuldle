@@ -234,7 +234,7 @@
 	const GRAY_BOX = '⬜';
 
 	function generateSummary() {
-		let summary = `https://chuldle.netlify.app/`;
+		let summary = `철들 결과\nhttps://chuldle.netlify.app/`;
 		if(practiceMode){
 			summary += `\nPractice\nAnswer: ${solution}\n`;
 		}
