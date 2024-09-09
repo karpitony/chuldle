@@ -240,8 +240,7 @@
 		}
 		else{
 			const gameNumber = seed - 723;
-			summary += `\nChuldle #${gameNumber}`;
-			summary.join('\n\n');
+			summary += `\nChuldle #${gameNumber}\n`;
 		}
 		guesses.forEach(guess => {
 			guess.disassembled.forEach(letterInfo => {
