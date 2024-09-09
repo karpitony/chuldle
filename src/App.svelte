@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>Chuldle</title>
+</svelte:head>
+
 <style global lang="postcss">
 	@tailwind base;
 	@tailwind components;
